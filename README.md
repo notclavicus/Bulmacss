@@ -63,15 +63,5 @@ A Login and Sign-Up interface for an online hub called "N-niwan Hub". Built with
 4. Error Messages - Contextual error display
 5. Animations - Shake effect on errors, slide-up on load
 
-## Repository Structure
-
-login-signup/
-├── index.html          # Login page
-├── signup.html         # Sign-Up page
-├── README.md           # Project documentation
-├── css/
-│   └── style.css       # Custom styles
-└── js/
-    └── script.js       # JavaScript functionality
 
 
