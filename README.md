@@ -1,4 +1,4 @@
-# NOVA Boutique - Login & Sign-Up System
+# N-niwan Hub - Login & Sign-Up System
 
 ## Group Members
 1. Clark Salazar
