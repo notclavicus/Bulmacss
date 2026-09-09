@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-niwan Hub - Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="shop-body">
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="brand-header">
+                <div class="brand-logo">
+                    <span class="logo-icon">N</span>
+                </div>
+                <div class="brand-text">
+                    <h1 class="title is-3">N-niwan</h1>
+                    <p class="subtitle is-6">Hub</p>
+                </div>
+            </div>
+
+            <div class="auth-content">
+                <h2 class="title is-4 mb-2">Welcome Back</h2>
+                <p class="is-size-7 text-muted mb-5">Sign in to access your account and continue shopping</p>
+
+                <form id="loginForm" novalidate>
+                    <div class="field">
+                        <label class="label-custom">Email Address</label>
+                        <div class="input-wrapper has-icons-left">
+                            <input 
+                                type="email" 
+                                id="loginEmail"
+                                placeholder="your@gmail.com"
+                                required
+                            >
+                            <span class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="emailError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Please enter a valid email
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-custom">Password</label>
+                        <div class="input-wrapper has-icons-right has-icons-left">
+                            <input 
+                                type="password" 
+                                id="loginPassword"
+                                placeholder="enter your password"
+                                required
+                            >
+                            <span class="input-icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="toggle-password" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="passwordError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Password must be at least 8 characters
+                        </p>
+                    </div>
+
+                    <div class="options-row">
+                       
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <div class="error-notification" id="loginError" style="display: none;">
+                        <button class="delete-btn" onclick="this.parentElement.style.display='none'">×</button>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Invalid credentials. Please try again.</span>
+                    </div>
+
+                    <button type="submit" class="auth-btn">
+                        <span>Sign In</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <button class="social-btn">
+                    <i class="fab fa-google"></i>
+                    <span>Continue with Google</span>
+                </button>
+
+                <p class="switch-text">
+                    New to N-niwan? 
+                    <a href="signup.html" class="switch-link">Create Account</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="auth-sidebar">
+            <div class="sidebar-content">
+                <div class="featured-text">
+                  
+                    <h2 class="display-text">50% off for broken people</h2>
+                    <p class="is-size-6">Exclusive only in our website!</p>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

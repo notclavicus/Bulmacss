@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-niwan Hub - Sign Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="shop-body">
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="auth-container signup-container">
+        <div class="auth-card">
+            <div class="brand-header">
+                <div class="brand-logo">
+                    <span class="logo-icon">N</span>
+                </div>
+                <div class="brand-text">
+                    <h1 class="title is-3">N-niwan</h1>
+                    <p class="subtitle is-6">Hub</p>
+                </div>
+            </div>
+
+            <div class="auth-content">
+                <h2 class="title is-4 mb-2">Join N-niwan</h2>
+                <p class="is-size-7 text-muted mb-5">Create an account and start your shopping journey</p>
+
+                <form id="signupForm" novalidate>
+                    <div class="field">
+                        <label class="label-custom">Full Name</label>
+                        <div class="input-wrapper has-icons-left">
+                            <input 
+                                type="text" 
+                                id="fullName"
+                                placeholder="Clark Salazar"
+                                required
+                            >
+                            <span class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="nameError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Please enter your full name
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-custom">Email Address</label>
+                        <div class="input-wrapper has-icons-left">
+                            <input 
+                                type="email" 
+                                id="signupEmail"
+                                placeholder="your@email.com"
+                                required
+                            >
+                            <span class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="emailError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Please enter a valid email
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-custom">Username</label>
+                        <div class="input-wrapper has-icons-left">
+                            <input 
+                                type="text" 
+                                id="username"
+                                placeholder="Choose a username"
+                                required
+                            >
+                            <span class="input-icon">
+                                <i class="fas fa-at"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="usernameError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Username must be at least 4 characters
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-custom">Password</label>
+                        <div class="input-wrapper has-icons-right has-icons-left">
+                            <input 
+                                type="password" 
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                required
+                            >
+                            <span class="input-icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="toggle-password" id="toggleSignupPassword">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </div>
+                        <div id="passwordStrength" class="strength-container" style="display: none;">
+                            <div class="strength-bar-bg">
+                                <div class="strength-bar" id="strengthBar"></div>
+                            </div>
+                            <p class="strength-text" id="strengthText"></p>
+                        </div>
+                        <p class="help is-danger" id="passError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Password must be at least 8 characters
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-custom">Confirm Password</label>
+                        <div class="input-wrapper has-icons-left">
+                            <input 
+                                type="password" 
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                required
+                            >
+                            <span class="input-icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="confirmError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Passwords do not match
+                        </p>
+                    </div>
+
+                    <div class="terms-check">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="termsCheck">
+                            <span class="checkmark"></span>
+                            <span class="terms-text">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                        </label>
+                        <p class="help is-danger" id="termsError" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i> Please agree to the terms
+                        </p>
+                    </div>
+
+                    <div class="success-notification" id="signupSuccess" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Account created successfully! Redirecting...</span>
+                    </div>
+
+                    <button type="submit" class="auth-btn">
+                        <span>Create Account</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <button class="social-btn">
+                    <i class="fab fa-google"></i>
+                    <span>Sign up with Google</span>
+                </button>
+
+                <p class="switch-text">
+                    Already have an account? 
+                    <a href="index.html" class="switch-link">Sign In</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="auth-sidebar">
+            <div class="sidebar-content">
+                <div class="featured-text">
+                    <span class="tag">Join the iniwan Club</span>
+                    <h2 class="display-text">Unlock Exclusive Perks</h2>
+                    <p class="is-size-6">Get early access to sales, free shipping, and personalized recommendations</p>
+                </div>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Shipping</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-percent"></i>
+                        <span>Member Discounts</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-undo"></i>
+                        <span>Easy Returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
